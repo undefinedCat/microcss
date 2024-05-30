@@ -1,0 +1,170 @@
+$primary-color: #6b3;
+$secondary-color: #8c5;
+$light-color: #be9;
+$dark-color: #473;
+$font: sans-serif;
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding-left: 1%;
+  padding-right: 1%;
+  background: $light-color;
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+li::marker {
+  color: $secondary-color;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2%;
+  height: 100%;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+
+nav a:hover {
+  color: $secondary-color;
+  background-color: #fff;
+}
+
+main {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0px 20px 16px #999);
+  background: #fff;
+  padding: 20px;
+  :not(form) {
+    text-align: justify;
+  }
+}
+
+code, kbd {
+  background: #0001;
+  display: inline-block;
+  padding: 4px;
+  font-size: 16px;
+}
+
+table, th, td {
+  background: #eee;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  th {
+    background: #ddd;
+  }
+  padding: 8px;
+  font-size: 16px;
+}
+
+blockquote {
+  background: #f8f8f8;
+  font-style: italic;
+  font-family: serif;
+  padding: 16px;
+  display: inline-block;
+}
+
+input {
+  accent-color: $secondary-color;
+}
+
+button, input[type="submit"] {
+  background: $primary-color;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+input:not([type="submit"]), textarea {
+    border: 1px solid $primary-color;
+    background: #f8f8f8;
+    padding: 8px;
+    color: #000;
+}
+
+button:hover {
+  background: $secondary-color;
+}
+
+input[type="submit"]:hover {
+  background: $secondary-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $secondary-color;
+}
+
+a:visited {
+    color:$light-color;
+}
+
+hr {
+  color: $primary-color;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  input:not([type="submit"]), textarea {
+      border: 1px solid $dark-color;
+      background: #333;
+      padding: 8px;
+      color: #fff;
+  }
+  nav{
+    background: $dark-color;
+  }
+  body {
+    background: #000;
+  }
+  main {
+    background: #333;
+    filter: drop-shadow(0px 20px 16px #555);
+    color: #fff;
+  }
+  blockquote {
+    background: #282828;
+  }
+  table {
+    color: #fff;
+    th {
+      background: #555;
+      border: 1px solid #fff;
+    }
+    td {
+      background: #444;
+      border: 1px solid #fff;
+    }
+    nav {
+      background: $dark-color;
+    }
+  }
+}
