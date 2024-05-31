@@ -123,12 +123,16 @@ a:hover {
   color: $secondary-color;
 }
 
-a:visited {
+a:visited:not(nav a) {
     color:$light-color;
 }
 
 hr {
   color: $primary-color;
+}
+
+img {
+  max-width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
